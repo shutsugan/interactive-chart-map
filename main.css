@@ -14,10 +14,11 @@ html, body {
 	justify-content: space-between;
 	align-items: center;
 	height: 100vh;
+	padding: 16px;
 }
 
 .map__image {
-	width: 100%;
+	width: 35%;
 	flex: 1 1 auto;
 }
 
@@ -25,6 +26,7 @@ html, body {
 	fill: #4B4B4B;
 	stroke: #ec8f07;
 	stroke-width: 1px;
+    cursor: pointer;
 	transition: fill .3s;
 }
 
@@ -32,9 +34,54 @@ html, body {
 	fill: #ec8f07;
 }
 
+.map__image--active {
+	fill: #ec8f07 !important;
+}
+
 .map__list {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-gap: 4px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 8px;
 	flex: 1 1 auto;
+}
+
+.map__list div {
+	height: 32px;
+    line-height: 32px;
+    padding: 0 12px;
+    border: 0;
+    border-radius: 16px;
+    background: #dedede;
+    display: inline-block;
+    color: rgba(0,0,0,.87);
+    margin: 2px 0;
+    font-size: 0;
+    white-space: nowrap;
+    font-size: 13px;
+	font-weight: bold;
+    vertical-align: middle;
+    display: inline-block;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.map__list div:hover {
+	background: #ec8f07;
+}
+
+.link-active{
+	background: #ec8f07 !important;
+}
+
+@media only screen and (max-width: 690px) {
+	.map {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.map__image {
+		margin-top: 542px;
+    	width: 100%;
+	}
 }
