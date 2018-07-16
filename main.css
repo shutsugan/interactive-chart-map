@@ -1,0 +1,40 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	width: 100%;
+}
+
+.map {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100vh;
+}
+
+.map__image {
+	width: 100%;
+	flex: 1 1 auto;
+}
+
+.map__image path {
+	fill: #4B4B4B;
+	stroke: #ec8f07;
+	stroke-width: 1px;
+	transition: fill .3s;
+}
+
+.map__image path:hover {
+	fill: #ec8f07;
+}
+
+.map__list {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 4px;
+	flex: 1 1 auto;
+}
